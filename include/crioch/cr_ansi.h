@@ -5,10 +5,10 @@
 #define CR_ANSI_H
 
 // Cursor
-#define CR_ANSI_CURSOR_UP(n) printf("\033[%dA", n)
-#define CR_ANSI_CURSOR_DOWN(n) printf("\033[%dB", n)
+#define CR_ANSI_CURSOR_UP(n)    printf("\033[%dA", n)
+#define CR_ANSI_CURSOR_DOWN(n)  printf("\033[%dB", n)
 #define CR_ANSI_CURSOR_RIGHT(n) printf("\033[%dC", n)
-#define CR_ANSI_CURSOR_LEFT(n) printf("\033[%dD", n)
+#define CR_ANSI_CURSOR_LEFT(n)  printf("\033[%dD", n)
 
 #define CR_ANSI_CURSOR_TO(r, c) printf("\033[%d;%dH", r, c)
 
@@ -32,5 +32,26 @@
 #define CR_ANSI_FORE_BRIGHT_MAGENTA() printf("\x1b[95m")
 #define CR_ANSI_FORE_BRIGHT_CYAN()    printf("\x1b[96m")
 #define CR_ANSI_FORE_BRIGHT_WHITE()   printf("\x1b[97m")
+
+// Background
+#define CR_ANSI_BACK_DEFAULT() printf("\x1b[49m")
+
+#define CR_ANSI_BACK_BLACK()   printf("\x1b[40m")
+#define CR_ANSI_BACK_RED()     printf("\x1b[41m")
+#define CR_ANSI_BACK_GREEN()   printf("\x1b[42m")
+#define CR_ANSI_BACK_YELLOW()  printf("\x1b[43m")
+#define CR_ANSI_BACK_BLUE()    printf("\x1b[44m")
+#define CR_ANSI_BACK_MAGENTA() printf("\x1b[45m")
+#define CR_ANSI_BACK_CYAN()    printf("\x1b[46m")
+#define CR_ANSI_BACK_WHITE()   printf("\x1b[47m")
+
+#define CR_ANSI_BACK_BRIGHT_BLACK()   printf("\x1b[100m")
+#define CR_ANSI_BACK_BRIGHT_RED()     printf("\x1b[101m")
+#define CR_ANSI_BACK_BRIGHT_GREEN()   printf("\x1b[102m")
+#define CR_ANSI_BACK_BRIGHT_YELLOW()  printf("\x1b[103m")
+#define CR_ANSI_BACK_BRIGHT_BLUE()    printf("\x1b[104m")
+#define CR_ANSI_BACK_BRIGHT_MAGENTA() printf("\x1b[105m")
+#define CR_ANSI_BACK_BRIGHT_CYAN()    printf("\x1b[106m")
+#define CR_ANSI_BACK_BRIGHT_WHITE()   printf("\x1b[107m")
 
 #endif
