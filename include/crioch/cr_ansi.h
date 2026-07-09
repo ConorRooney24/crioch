@@ -62,6 +62,8 @@
 // Foreground Colours
 #define CR_ANSI_FORE_DEFAULT() printf("\x1b[39m")
 
+#define CR_ANSI_FORE_RGB(r, g, b) printf("\033[38;2;%d;%d;%dm", r, g, b)
+
 #define CR_ANSI_FORE_BLACK()   printf("\x1b[30m")
 #define CR_ANSI_FORE_RED()     printf("\x1b[31m")
 #define CR_ANSI_FORE_GREEN()   printf("\x1b[32m")
@@ -82,6 +84,8 @@
 
 // Background Colours
 #define CR_ANSI_BACK_DEFAULT() printf("\x1b[49m")
+
+#define CR_ANSI_BACK_RGB(r, g, b) printf("\033[48;2;%d;%d;%dm", r, g, b)
 
 #define CR_ANSI_BACK_BLACK()   printf("\x1b[40m")
 #define CR_ANSI_BACK_RED()     printf("\x1b[41m")
