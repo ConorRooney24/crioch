@@ -36,6 +36,13 @@
 #define CR_ANSI_CLEAR_LINE_NEXT() printf("\033[0K")
 #define CR_ANSI_CLEAR_LINE_PREV() printf("\033[1K")
 
+// Line & Character insertion
+#define CR_ANSI_LINE_INSERT() printf("\033[1L")
+#define CR_ANSI_LINE_DELETE() printf("\033[1M")
+
+#define CR_ANSI_CHAR_INSERT() printf("\033[@")
+#define CR_ANSI_CHAR_DELETE() printf("\033[1P")
+
 // Text Formatting
 #define CR_ANSI_RESET()                 printf("\033[0m")
 #define CR_ANSI_BOLD()                  printf("\033[1m")
