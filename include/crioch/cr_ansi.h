@@ -26,6 +26,10 @@
 #define CR_ANSI_CURSOR_SHOW() printf("\033[?25h")
 #define CR_ANSI_CURSOR_HIDE() printf("\033[?25l")
 
+// Buffer
+#define CR_ANSI_BUFFER_ENTER() printf("\033[?1049h")
+#define CR_ANSI_BUFFER_EXIT()  printf("\033[?1049l")
+
 // Clearing
 #define CR_ANSI_CLEAR_SCREEN()    printf("\033[2J")
 #define CR_ANSI_CLEAR_TO_END()    printf("\033[J")
