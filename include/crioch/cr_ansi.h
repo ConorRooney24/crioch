@@ -10,12 +10,21 @@
 #define CR_ANSI_CURSOR_RIGHT(n) printf("\033[%dC", n)
 #define CR_ANSI_CURSOR_LEFT(n)  printf("\033[%dD", n)
 
-#define CR_ANSI_CURSOR_TO(r, c) printf("\033[%d;%dH", r, c)
+#define CR_ANSI_CURSOR_TO(r, c)      printf("\033[%d;%dH", r, c)
+#define CR_ANSI_CURSOR_TO_COL(n)     printf("\033[%dG", n)
+#define CR_ANSI_CURSOR_UP_LINES(n)   printf("\033[%dF", n)
+#define CR_ANSI_CURSOR_DOWN_LINES(n) printf("\033[%dE", n)
+
+#define CR_ANSI_CURSOR_SAVE()    printf("\033[s")
+#define CR_ANSI_CURSOR_RESTORE() printf("\033[u")
 
 // Cursor Formatting
 #define CR_ANSI_CURSOR_BLINK_SLOW()    printf("\033[5m")
 #define CR_ANSI_CURSOR_BLINK_FAST()    printf("\033[6m")
 #define CR_ANSI_CURSOR_BLINK_DISABLE() printf("\033[25m")
+
+#define CR_ANSI_CURSOR_SHOW() printf("\033[?25h")
+#define CR_ANSI_CURSOR_HIDE() printf("\033[?25l")
 
 // Text Formatting
 #define CR_ANSI_RESET()                 printf("\033[0m")
