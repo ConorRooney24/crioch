@@ -12,6 +12,11 @@
 
 #define CR_ANSI_CURSOR_TO(r, c) printf("\033[%d;%dH", r, c)
 
+// Cursor Formatting
+#define CR_ANSI_CURSOR_BLINK_SLOW()    printf("\033[5m")
+#define CR_ANSI_CURSOR_BLINK_FAST()    printf("\033[6m")
+#define CR_ANSI_CURSOR_BLINK_DISABLE() printf("\033[25m")
+
 // Text Formatting
 #define CR_ANSI_BOLD()                  printf("\033[1m")
 #define CR_ANSI_DIM()                   printf("\033[2m")
