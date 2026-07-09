@@ -18,6 +18,7 @@
 #define CR_ANSI_CURSOR_BLINK_DISABLE() printf("\033[25m")
 
 // Text Formatting
+#define CR_ANSI_RESET()                 printf("\033[0m")
 #define CR_ANSI_BOLD()                  printf("\033[1m")
 #define CR_ANSI_DIM()                   printf("\033[2m")
 #define CR_ANSI_NORMAL()                printf("\033[22m")
