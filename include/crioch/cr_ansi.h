@@ -4,7 +4,7 @@
 #ifndef CR_ANSI_H
 #define CR_ANSI_H
 
-// Cursor
+// Cursor Movement
 #define CR_ANSI_CURSOR_UP(n)    printf("\033[%dA", n)
 #define CR_ANSI_CURSOR_DOWN(n)  printf("\033[%dB", n)
 #define CR_ANSI_CURSOR_RIGHT(n) printf("\033[%dC", n)
@@ -12,7 +12,22 @@
 
 #define CR_ANSI_CURSOR_TO(r, c) printf("\033[%d;%dH", r, c)
 
-// Foreground
+// Text Formatting
+#define CR_ANSI_BOLD()                  printf("\033[1m")
+#define CR_ANSI_DIM()                   printf("\033[2m")
+#define CR_ANSI_NORMAL()                printf("\033[22m")
+#define CR_ANSI_ITALIC()                printf("\033[3m")
+#define CR_ANSI_ITALIC_DISABLE()        printf("\033[23m")
+#define CR_ANSI_UNDERLINE()             printf("\033[4m")
+#define CR_ANSI_UNDERLINE_DISABLE()     printf("\033[24m")
+#define CR_ANSI_REVERSE()               printf("\033[7m")
+#define CR_ANSI_REVERSE_DISABLE()       printf("\033[27m")
+#define CR_ANSI_HIDDEN()                printf("\033[8m")
+#define CR_ANSI_HIDDEN_DISABLE()        printf("\033[28m")
+#define CR_ANSI_STRIKETHROUGH           printf("\033[9m")
+#define CR_ANSI_STRIKETHROUGH_DISABLE() printf("\033[29m")
+
+// Foreground Colours
 #define CR_ANSI_FORE_DEFAULT() printf("\x1b[39m")
 
 #define CR_ANSI_FORE_BLACK()   printf("\x1b[30m")
@@ -33,7 +48,7 @@
 #define CR_ANSI_FORE_BRIGHT_CYAN()    printf("\x1b[96m")
 #define CR_ANSI_FORE_BRIGHT_WHITE()   printf("\x1b[97m")
 
-// Background
+// Background Colours
 #define CR_ANSI_BACK_DEFAULT() printf("\x1b[49m")
 
 #define CR_ANSI_BACK_BLACK()   printf("\x1b[40m")
