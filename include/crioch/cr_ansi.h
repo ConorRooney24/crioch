@@ -26,6 +26,16 @@
 #define CR_ANSI_CURSOR_SHOW() printf("\033[?25h")
 #define CR_ANSI_CURSOR_HIDE() printf("\033[?25l")
 
+// Clearing
+#define CR_ANSI_CLEAR_SCREEN()    printf("\033[2J")
+#define CR_ANSI_CLEAR_TO_END()    printf("\033[J")
+#define CR_ANSI_CLEAR_UP()        printf("\033[1J")
+#define CR_ANSI_CLEAR_DOWN()      printf("\033[0J")
+#define CR_ANSI_CLEAR_RIGHT()     printf("\033[K")
+#define CR_ANSI_CLEAR_LINE()      printf("\033[2K")
+#define CR_ANSI_CLEAR_LINE_NEXT() printf("\033[0K")
+#define CR_ANSI_CLEAR_LINE_PREV() printf("\033[1K")
+
 // Text Formatting
 #define CR_ANSI_RESET()                 printf("\033[0m")
 #define CR_ANSI_BOLD()                  printf("\033[1m")
